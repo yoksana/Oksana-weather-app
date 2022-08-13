@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/026c00db14.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="row" id="search-form">
+        <div class="col-auto">
+          <input
+            type="search"
+            class="city"
+            id="city-text"
+            placeholder="Type city name"
+          />
+          <input
+            type="submit"
+            class="btn_submit"
+            id="change-city"
+            value="Search"
+          />
+          <input
+            type="submit"
+            class="btn_current"
+            id="current-location"
+            value="Current"
+          />
+        </div>
+      </form>
+      <div class="currently">
+        <i class="fa-solid fa-sun"></i>
+        <span class="temerature" id="temp">20</span>
+        <span class="units" id="celsius">°C</a>
+        </span>
+      </div>
+      <div class="city_date">
+        <p class="cityname" id="mycity">Kyiv</p>
+        <p class="datetime" id="timenow">Monday 12:43</p>
+      </div>
+      <div class="other_info">
+        <span id="humidity">Humidity: 68%</span><br />
+        <span id="wind">Wind: 1km/h</span>
+      </div>
+
+      <div class="vertical"></div>
+
+      <div class="row bottom">
+        <div class="col">
+          Mon
+          <div class="col2">
+            <i class="fa-solid fa-sun"></i>
+            <div class="col3">23°C</div>
+          </div>
+        </div>
+
+        <div class="col">
+          Tue
+          <div class="col2">
+            <i class="fa-solid fa-cloud"></i>
+            <div class="col3">23°C</div>
+          </div>
+        </div>
+        <div class="col">
+          Wed
+          <div class="col2">
+            <i class="fa-solid fa-cloud-rain"></i>
+            <div class="col3">23°C</div>
+          </div>
+        </div>
+
+        <div class="col">
+          Thu
+          <div class="col2">
+            <i class="fa-solid fa-cloud"></i>
+            <div class="col3">23°C</div>
+          </div>
+        </div>
+        <div class="col">
+          Fri
+          <div class="col2">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <div class="col3">23°C</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+.vertical {
+  border-left: 2px solid rgb(192, 186, 186);
+  height: 150px;
+  position: absolute;
+  top: 10%;
+  left: 49%;
+}
+.container {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(242, 235, 243) 0%,
+    rgb(234, 241, 249) 90.1%
+  );
+  padding: 15px 45px;
+  width: 700px;
+  box-shadow: 3px 3px 6px rgb(0 0 0 / 20%);
+}
+.city_date {
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  font-size: 50px;
+  line-height: 40px;
+  color: rgb(90, 98, 117);
+}
+.currently {
+  font-size: 70px;
+  color: rgb(90, 98, 117);
+}
+.other_info {
+  font-size: 18px;
+  opacity: 70%;
+  padding: 10px 0px;
+}
+
+.col {
+  text-align: center;
+  background-color: rgb(50, 74, 106);
+  padding: 10px 5px 10px;
+  font-size: 20px;
+  color: azure;
+  margin: 1px;
+}
+.col3 {
+  text-align: center;
+  background-color: rgb(50, 74, 106);
+  padding-bottom: 10px;
+}
+
+.col-auto {
+  padding-left: 0px;
+  font-size: 18px;
+}
+.btn_submit {
+  padding: 3px 20px;
+  border: none;
+  background-color: rgb(50, 74, 106);
+  color: azure;
+}
+.btn_current {
+  padding: 3px 20px;
+  border: none;
+  background-color: rgb(90, 98, 117);
+  color: azure;
+}
+
+#celsius {
+  margin: 1px 1px 1px -19px;
+  color: rgb(90, 98, 117);
+}
