@@ -1,23 +1,32 @@
-.vertical {
-  border-left: 2px solid rgb(192, 186, 186);
-  height: 150px;
-  position: absolute;
-  top: 10%;
-  left: 49%;
-}
 .container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.weather {
+  display: block;
   background: radial-gradient(
     circle at 10% 20%,
     rgb(242, 235, 243) 0%,
     rgb(234, 241, 249) 90.1%
   );
-  padding: 15px 45px;
+  padding: 15px 45px 15px 45px;
   width: 700px;
   box-shadow: 3px 3px 6px rgb(0 0 0 / 20%);
+  margin: 0 auto;
+}
+.vertical {
+  border-left: 2px solid rgb(192, 186, 186);
+  height: 150px;
+  position: absolute;
+  top: 19%;
+  left: 49%;
 }
 .city_date {
   position: absolute;
-  top: 11%;
+  top: 20%;
   left: 50%;
   font-size: 50px;
   line-height: 40px;
@@ -69,6 +78,7 @@
   color: rgb(90, 98, 117);
 }
 #info {
-  position: absolute;
-  left: 12%;
+  display: block;
+  width: 700px;
+  margin: 0 auto;
 }
