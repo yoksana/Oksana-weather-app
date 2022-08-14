@@ -68,3 +68,7 @@
   margin: 1px 1px 1px -19px;
   color: rgb(90, 98, 117);
 }
+#info {
+  position: absolute;
+  left: 12%;
+}
