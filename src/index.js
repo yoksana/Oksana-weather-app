@@ -1,5 +1,4 @@
 currentTime = new Date();
-console.log(currentTime);
 
 let days = [
   "Sunday",
@@ -26,20 +25,21 @@ let curtime = document.querySelector("#timenow");
 curtime.innerHTML = `${dayweek} ${hour}:${minute}`;
 
 function showTemp(response) {
-  console.log(response.data);
   let temperature = document.querySelector("#temp");
-  let temperatureRounded = Math.round(response.data.main.temp);
-  temperature.innerHTML = temperatureRounded;
   let city = document.querySelector("#mycity");
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+  let icon = document.querySelector("#icon");
+
+  celsius = response.data.main.temp;
+  let temperatureRounded = Math.round(celsius);
+  temperature.innerHTML = temperatureRounded;
   city.innerHTML = response.data.name;
-  document.querySelector(
-    "#humidity"
-  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
-    response.data.wind.speed
-  )}km/h`;
-  console.log(response.data.main);
+  humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}km/h`;
+  icon.setAttribute("src", "http://openweathermap.org/img/wn/10d@2x.png");
 }
+
 function searchCity(city) {
   let apiKey = "89b5d6145e65f229b79e3ab3372a1a19";
   let cityUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
@@ -52,25 +52,32 @@ function cityChange(event) {
   searchCity(newCity);
 }
 
+function farChange(event) {
+  event.preventDefault();
+  let showUnit = document.querySelector("#temp");
+  let far = celsius * (9 / 5) + 32;
+  showUnit.innerHTML = Math.round(far);
+}
+function celChange(event) {
+  event.preventDefault();
+  let showUnit = document.querySelector("#temp");
+  showUnit.innerHTML = Math.round(celsius);
+}
+
+let celsius = null;
 let selectButton = document.querySelector("#search-form");
 selectButton.addEventListener("submit", cityChange);
 
 searchCity("Kyiv");
 
-// Current temp section
+let selectFar = document.querySelector("#fahrenheit");
+selectFar.addEventListener("click", farChange);
 
-function showPosition(response) {
-  let lat = response.coords.latitude;
-  let lon = response.coords.longitude;
-  let apiKey = "89b5d6145e65f229b79e3ab3372a1a19";
-  let geoUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  axios.get(geoUrl).then(showTemp);
+let selectCel = document.querySelector("#celsius");
+selectCel.addEventListener("click", celChange);
+
+function showWeathericon(event) {
+  event.preventDefault;
+  let weatherAPI = "";
+  let icon = document.querySelector("#weather-icon");
 }
-
-function newcityChange(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showPosition);
-}
-
-let selectCurrent = document.querySelector("#current-location");
-selectCurrent.addEventListener("click", newcityChange);

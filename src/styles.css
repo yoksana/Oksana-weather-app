@@ -26,16 +26,17 @@
 }
 .city_date {
   position: absolute;
-  top: 20%;
+  top: 21%;
   left: 50%;
   font-size: 50px;
   line-height: 40px;
   color: rgb(90, 98, 117);
 }
-.currently {
-  font-size: 70px;
+#temp {
+  font-size: 75px;
   color: rgb(90, 98, 117);
 }
+
 .other_info {
   font-size: 18px;
   opacity: 70%;
@@ -66,19 +67,27 @@
   background-color: rgb(50, 74, 106);
   color: azure;
 }
-.btn_current {
-  padding: 3px 20px;
-  border: none;
-  background-color: rgb(90, 98, 117);
-  color: azure;
+.currently {
+  margin: 10px 0px -15px -30px;
 }
 
-#celsius {
-  margin: 1px 1px 1px -19px;
-  color: rgb(90, 98, 117);
-}
 #info {
   display: block;
   width: 700px;
   margin: 0 auto;
+}
+.units {
+  font-size: 20px;
+  position: absolute;
+  top: 21%;
+  padding: 0px 5px;
+}
+#celsius {
+  text-decoration: none;
+  color: rgb(50, 74, 106);
+}
+
+#fahrenheit {
+  text-decoration: none;
+  color: rgb(50, 74, 106);
 }
