@@ -37,7 +37,10 @@ function showTemp(response) {
   city.innerHTML = response.data.name;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}km/h`;
-  icon.setAttribute("src", "http://openweathermap.org/img/wn/10d@2x.png");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(city) {
