@@ -29,7 +29,7 @@
   top: 21%;
   left: 50%;
   font-size: 50px;
-  line-height: 40px;
+  line-height: 30px;
   color: rgb(90, 98, 117);
 }
 #temp {
@@ -90,4 +90,8 @@
 #fahrenheit {
   text-decoration: none;
   color: rgb(50, 74, 106);
+}
+#last-updated {
+  font-size: 18px;
+  margin: 2px;
 }

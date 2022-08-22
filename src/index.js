@@ -1,5 +1,3 @@
-currentTime = new Date();
-
 let days = [
   "Sunday",
   "Monday",
@@ -10,26 +8,28 @@ let days = [
   "Saturday",
 ];
 
-let dayweek = days[currentTime.getDay()];
-
-let hour = currentTime.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
+function checkTime(time) {
+  let mytime = new Date(time);
+  let dayweek = days[mytime.getDay()];
+  let hour = mytime.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = mytime.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  return `${dayweek} ${hour}:${minute}`;
 }
-let minute = currentTime.getMinutes();
-if (minute < 10) {
-  minute = `0${minute}`;
-}
-
-let curtime = document.querySelector("#timenow");
-curtime.innerHTML = `${dayweek} ${hour}:${minute}`;
 
 function showTemp(response) {
+  console.log(response.data);
   let temperature = document.querySelector("#temp");
   let city = document.querySelector("#mycity");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let icon = document.querySelector("#icon");
+  let time = document.querySelector("#timenow");
 
   celsius = response.data.main.temp;
   let temperatureRounded = Math.round(celsius);
@@ -41,6 +41,7 @@ function showTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  time.innerHTML = checkTime(response.data.dt * 1000);
 }
 
 function searchCity(city) {
