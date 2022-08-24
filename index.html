@@ -21,9 +21,9 @@
 
   <body>
     <div class="container">
-      <div class = "weather">
+      <div class = "weather-box">
       <form class="row" id="search-form">
-        <div class="col-auto">
+        <div class="col-search">
           <input
             type="search"
             class="city"
@@ -39,9 +39,9 @@
 
         </div>
       </form>
-      <div class = "currently">
+      <div class = "current-temp">
         <div class="d-flex weather-temperature">
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" style="width: 120px"  alt="Clear" id="icon" />  
+        <img id="icon" src="http://openweathermap.org/img/wn/10d@2x.png" width= "120px"  alt="Clear"  />  
         <div>
         <span class="temerature" id="temp"></span>
           <span class="units">
@@ -51,59 +51,30 @@
         </div>
         </div>
         </div>
-      <div class="city_date">
+      <div class="city-date">
         <p class="cityname" id="mycity" >Kyiv</p>
         <small id="last-updated"> Last updated on: </small>
         <p class="datetime" id="timenow">Monday 12:43</p>
       </div>
-      <div class="other_info">
+      <div class="other-weather-info">
         <span id="humidity">Humidity: 68%</span><br />
         <span id="wind">Wind: 1km/h</span>
       </div>
-
-        <div class="vertical"></div>
-
+      <div class="vertical"></div>
       <div class="row bottom">
-        <div class="col">
+        <div class="col-2">
+          <div class = "fcst-date">
           Mon
-          <div class="col2">
-            <i class="fa-solid fa-sun"></i>
-            <div class="col3">23°C</div>
           </div>
-        </div>
-
-        <div class="col">
-          Tue
-          <div class="col2">
-            <i class="fa-solid fa-cloud"></i>
-            <div class="col3">23°C</div>
-          </div>
-        </div>
-        <div class="col">
-          Wed
-          <div class="col2">
-            <i class="fa-solid fa-cloud-rain"></i>
-            <div class="col3">23°C</div>
-          </div>
-        </div>
-
-        <div class="col">
-          Thu
-          <div class="col2">
-            <i class="fa-solid fa-cloud"></i>
-            <div class="col3">23°C</div>
-          </div>
-        </div>
-        <div class="col">
-          Fri
-          <div class="col2">
-            <i class="fa-solid fa-cloud-sun"></i>
-            <div class="col3">23°C</div>
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" width="70px"  alt=""/>        
+          <div class="fcst-temp">
+            <span class="fcst-temp-max"> 28° </span>
+            <span class="fcst-temp-min"> 20° </span>
           </div>
         </div>
       </div>
       </div>
-      <div id="info"><a href= https://github.com/yoksana/Oksana-weather-app target="blank"> Open-source code</a>, by Oksana B</div>
+    <div id="git-info"><a href= https://github.com/yoksana/Oksana-weather-app target="blank"> Open-source code</a>, by Oksana B</div>
     </div>
     
     <script src="src/index.js"></script>

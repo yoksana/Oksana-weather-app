@@ -5,7 +5,7 @@
   position: absolute;
 }
 
-.weather {
+.weather-box {
   display: block;
   background: radial-gradient(
     circle at 10% 20%,
@@ -17,64 +17,23 @@
   box-shadow: 3px 3px 6px rgb(0 0 0 / 20%);
   margin: 0 auto;
 }
-.vertical {
-  border-left: 2px solid rgb(192, 186, 186);
-  height: 150px;
-  position: absolute;
-  top: 19%;
-  left: 49%;
-}
-.city_date {
-  position: absolute;
-  top: 21%;
-  left: 50%;
-  font-size: 50px;
-  line-height: 30px;
-  color: rgb(90, 98, 117);
-}
-#temp {
-  font-size: 75px;
-  color: rgb(90, 98, 117);
-}
-
-.other_info {
-  font-size: 18px;
-  opacity: 70%;
-  padding: 10px 0px;
-}
-
-.col {
-  text-align: center;
-  background-color: rgb(50, 74, 106);
-  padding: 10px 5px 10px;
-  font-size: 20px;
-  color: azure;
-  margin: 1px;
-}
-.col3 {
-  text-align: center;
-  background-color: rgb(50, 74, 106);
-  padding-bottom: 10px;
-}
-
-.col-auto {
+.col-search {
   padding-left: 0px;
   font-size: 18px;
 }
+
 .btn_submit {
   padding: 3px 20px;
   border: none;
   background-color: rgb(50, 74, 106);
   color: azure;
 }
-.currently {
+.current-temp {
   margin: 10px 0px -15px -30px;
 }
-
-#info {
-  display: block;
-  width: 700px;
-  margin: 0 auto;
+#temp {
+  font-size: 75px;
+  color: rgb(90, 98, 117);
 }
 .units {
   font-size: 20px;
@@ -91,7 +50,59 @@
   text-decoration: none;
   color: rgb(50, 74, 106);
 }
+.other-weather-info {
+  font-size: 18px;
+  opacity: 70%;
+  padding: 10px 0px;
+}
+
+.vertical {
+  border-left: 2px solid rgb(192, 186, 186);
+  height: 150px;
+  position: absolute;
+  top: 19%;
+  left: 49%;
+}
+.city-date {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  font-size: 50px;
+  line-height: 30px;
+  color: rgb(90, 98, 117);
+}
 #last-updated {
   font-size: 18px;
   margin: 0px 2px;
+}
+#timenow {
+  font-size: 40px;
+}
+
+.col-2 {
+  text-align: center;
+  background-color: rgb(50, 74, 106);
+  padding: 0px 5px 0px;
+  font-size: 20px;
+  color: azure;
+  margin: 1px;
+}
+.fcst-date {
+  margin-bottom: -5px;
+}
+.fcst-temp {
+  text-align: center;
+  background-color: rgb(50, 74, 106);
+  padding-bottom: 10px;
+  margin-top: -15px;
+}
+.fcst-temp-min {
+  color: azure;
+  opacity: 70%;
+}
+
+#git-info {
+  display: block;
+  width: 700px;
+  margin: 0 auto;
 }
