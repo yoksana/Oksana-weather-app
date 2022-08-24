@@ -22,57 +22,47 @@
   <body>
     <div class="container">
       <div class = "weather-box">
-      <form class="row" id="search-form">
-        <div class="col-search">
-          <input
-            type="search"
-            class="city"
-            id="city-text"
-            placeholder="Type city name"
-          />
-          <input
-            type="submit"
-            class="btn_submit"
-            id="change-city"
-            value="Search"
-          />
-
-        </div>
-      </form>
-      <div class = "current-temp">
-        <div class="d-flex weather-temperature">
-        <img id="icon" src="http://openweathermap.org/img/wn/10d@2x.png" width= "120px"  alt="Clear"  />  
-        <div>
-        <span class="temerature" id="temp"></span>
-          <span class="units">
-          <a href="#" id="celsius"> °C</a>  |
-          <a href="#" id="fahrenheit">°F</a>
-        </span>
-        </div>
-        </div>
-        </div>
-      <div class="city-date">
-        <p class="cityname" id="mycity" >Kyiv</p>
-        <small id="last-updated"> Last updated on: </small>
-        <p class="datetime" id="timenow">Monday 12:43</p>
-      </div>
-      <div class="other-weather-info">
-        <span id="humidity">Humidity: 68%</span><br />
-        <span id="wind">Wind: 1km/h</span>
-      </div>
-      <div class="vertical"></div>
-      <div class="row bottom">
-        <div class="col-2">
-          <div class = "fcst-date">
-          Mon
+        <form class="row" id="search-form">
+         <div class="col-search">
+            <input
+              type="search"
+              class="city"
+              id="city-text"
+              placeholder="Type city name"
+            />
+            <input
+              type="submit"
+              class="btn_submit"
+              id="change-city"
+              value="Search"
+            />
           </div>
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" width="70px"  alt=""/>        
-          <div class="fcst-temp">
-            <span class="fcst-temp-max"> 28° </span>
-            <span class="fcst-temp-min"> 20° </span>
+        </form>
+        <div class = "current-temp">
+          <div class="d-flex weather-temperature">
+            <img id="icon" src="http://openweathermap.org/img/wn/10d@2x.png" width= "120px"  alt="Clear"  />  
+            <div>
+              <span class="temerature" id="temp"></span>
+              <span class="units">
+                <a href="#" id="celsius"> °C</a>  |
+                <a href="#" id="fahrenheit">°F</a>
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="city-date">
+          <p class="cityname" id="mycity" >Kyiv</p>
+          <small id="last-updated"> Last updated on: </small>
+          <p class="datetime" id="timenow">Monday 12:43</p>
+        </div>
+        <div class="other-weather-info">
+          <span id="humidity">Humidity: 68%</span><br />
+          <span id="wind">Wind: 1km/h</span>
+        </div>
+        <div class="vertical"></div>
+        <div class="weather-fcst" >
+          <div class="row bottom" id="weekfcst"></div>
+        </div>
       </div>
     <div id="git-info"><a href= https://github.com/yoksana/Oksana-weather-app target="blank"> Open-source code</a>, by Oksana B</div>
     </div>

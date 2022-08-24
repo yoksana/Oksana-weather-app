@@ -21,6 +21,26 @@ function checkTime(time) {
   }
   return `${dayweek} ${hour}:${minute}`;
 }
+function weekForecast() {
+  let forecast = document.querySelector("#weekfcst");
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHTML = "";
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col">
+              <div class = "fcst-date">${day}</div>
+              <img src="http://openweathermap.org/img/wn/10d@2x.png" width="70px"  alt=""/>        
+              <div class="fcst-temp">
+                <span class="fcst-temp-max"> 28° </span>
+                <span class="fcst-temp-min"> 20° </span>
+              </div>
+            </div>
+  `;
+  });
+  forecast.innerHTML = forecastHTML;
+}
 
 function showTemp(response) {
   console.log(response.data);
@@ -73,6 +93,7 @@ let selectButton = document.querySelector("#search-form");
 selectButton.addEventListener("submit", cityChange);
 
 searchCity("Kyiv");
+weekForecast();
 
 let selectFar = document.querySelector("#fahrenheit");
 selectFar.addEventListener("click", farChange);
