@@ -31,25 +31,18 @@
 .current-temp {
   margin: 10px 0px -15px -30px;
 }
-#temp {
+.temperature {
   font-size: 75px;
   color: rgb(90, 98, 117);
 }
 .units {
-  font-size: 20px;
+  font-size: 40px;
   position: absolute;
-  top: 21%;
+  top: 19%;
+  color: rgb(90, 98, 117);
   padding: 0px 5px;
 }
-#celsius {
-  text-decoration: none;
-  color: rgb(50, 74, 106);
-}
 
-#fahrenheit {
-  text-decoration: none;
-  color: rgb(50, 74, 106);
-}
 .other-weather-info {
   font-size: 18px;
   opacity: 70%;

@@ -76,7 +76,7 @@ function showTemp(response) {
   temperature.innerHTML = temperatureRounded;
   city.innerHTML = response.data.name;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}km/h`;
+  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}m/h`;
   icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -97,29 +97,11 @@ function cityChange(event) {
   searchCity(newCity);
 }
 
-function farChange(event) {
-  event.preventDefault();
-  let showUnit = document.querySelector("#temp");
-  let far = celsius * (9 / 5) + 32;
-  showUnit.innerHTML = Math.round(far);
-}
-function celChange(event) {
-  event.preventDefault();
-  let showUnit = document.querySelector("#temp");
-  showUnit.innerHTML = Math.round(celsius);
-}
-
 let celsius = null;
 let selectButton = document.querySelector("#search-form");
 selectButton.addEventListener("submit", cityChange);
 
 searchCity("Kyiv");
-
-let selectFar = document.querySelector("#fahrenheit");
-selectFar.addEventListener("click", farChange);
-
-let selectCel = document.querySelector("#celsius");
-selectCel.addEventListener("click", celChange);
 
 function showWeathericon(event) {
   event.preventDefault;
